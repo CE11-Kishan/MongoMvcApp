@@ -1,0 +1,33 @@
+@model IEnumerable<MongoMvcApp.Models.Product>
+
+@{
+      ViewData["Title"] = "Products List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+      <thead>
+            <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Actions</th>
+            </tr>
+      </thead>
+      <tbody>
+            @foreach (var product in Model)
+            {
+                  <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>
+                              <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-info">Details</a>
+                              <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-primary">Edit</a>
+                              <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                  </tr>
+            }
+      </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Products")" class="btn btn-success">Create New Product</a>

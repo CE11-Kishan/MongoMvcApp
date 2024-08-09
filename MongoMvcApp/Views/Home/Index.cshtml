@@ -1,8 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+      ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+      <h1 class="display-4 mb-5 mt-5">Product App</h1>
+      <p>
+            Welcome to our MVC .NET App integrated with MongoDB !!!! 
+      </p>
+
+      <p>
+            You can easily create, read, update, and delete products stored in a MongoDB database.
+      </p>
+
+      <p>
+            Explore the products section to manage your inventory in real-time. 
+      </p>
+
+      <a asp-action="Index" asp-controller="Products" class="btn btn-primary">Explore Now</a>
+
 </div>

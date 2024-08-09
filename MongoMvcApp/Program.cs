@@ -1,15 +1,27 @@
+using MongoDB.Driver;
+using MongoMvcApp.Models;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var mongoConnectionString = builder.Configuration.GetConnectionString("MongoDb");
+var mongoClient = new MongoClient(mongoConnectionString);
+var mongoDatabaseName = builder.Configuration["MongoDbSettings:DatabaseName"];
+var mongoDatabase = mongoClient.GetDatabase(mongoDatabaseName);
+
+
+builder.Services.AddSingleton<IMongoClient>(mongoClient);
+builder.Services.AddSingleton(mongoDatabase);
+builder.Services.AddScoped<ProductRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -22,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Products}/{action=Index}/{id?}");
 
 app.Run();

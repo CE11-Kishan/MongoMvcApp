@@ -1,0 +1,73 @@
+# ASP.NET Core
+bin/
+obj/
+*.db
+*.bak
+*.log
+*.pdb
+*.exe
+*.dll
+*.cache
+*.diff
+*.patch
+*.dat
+*.csv
+*.tmp
+*.swp
+*.user
+*.rsuser
+*.suo
+*.psess
+*.pidb
+*.mdf
+*.ldf
+*.ndf
+*.pidb
+*.psess
+.vs/
+
+# Build directories
+**/bin/
+**/obj/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Configuration files
+appsettings.json
+appsettings.Development.json
+appsettings.*.json
+
+# Rider
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/gradle.xml
+.idea/**/assetWizardSettings.xml
+.idea/**/xmlpotability.xml
+.idea/**/jb_navigator.xml
+
+# ReSharper
+*.DotSettings.user
+
+# Coverage and Test Results
+TestResults/
+*.coverage
+*.coveragexml
+*.log
+*.TestResult
+*.opencover.xml
+
+# MongoDB related
+*.mongodb
+
+# Logs
+logs/
+*.log
