@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MongoMvcApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1c050b64f8ffce7b0151d42e63fb1545c1d5c94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e70ab1732dad70b38e5ee9c9023cbb3187bed9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MongoMvcApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MongoMvcApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
